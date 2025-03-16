@@ -9,5 +9,13 @@ export const stylesMixin  = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         color:"#fff"
-    }
+    },
+    
 })
+
+
+// #eeeeee (238,238,238)
+// #ffcccc	(255,204,204)
+// #fcb0b1	(252,176,177)
+// #ff9999	(255,153,153)
+// #ff6666	(255,102,102)

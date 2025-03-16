@@ -1,10 +1,10 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 
-import ChatsPage from '../../pages/ChatsPage';
-import ContactsPage from '../../pages/ContactsPage';
-import TimeLinePage from '../../pages/TimeLinePage';
-import MePage from '../../pages/MePage';
+import ChatsPage from '../../pages/ChatsPages/ChatsPage';
+import ContactsPage from '../../pages/ContactsPages/ContactsPage';
+import TimeLinePage from '../../pages/TimeLinePages/TimeLinePage';
+import MePage from '../../pages/MePages/MePage';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
@@ -23,6 +23,12 @@ const MenuComponent = ({ navigation }) => {
     ];
 
     const [currentScreen, setCurrentScreen] = useState('Chats');
+
+    const handleTabPress = (tabKey) => {
+        setCurrentScreen(tabKey);
+        // Cập nhật params của route khi nhấn menu
+        navigation.setParams({ screenName: tabKey });
+    };
 
     const renderScreen = () => {
         switch (currentScreen) {
@@ -50,7 +56,7 @@ const MenuComponent = ({ navigation }) => {
                     {ARRAY_LIST_MENU.map((tab) => (
                         <TouchableOpacity
                             key={tab.key}
-                            onPress={() => setCurrentScreen(tab.key)}
+                            onPress={() => handleTabPress(tab.key)}
                             style={[
                                 styles.tabItem,
                                 currentScreen === tab.key && styles.activeTabItem

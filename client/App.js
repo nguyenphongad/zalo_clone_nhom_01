@@ -13,11 +13,11 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 import SplashScreenComponent from './src/components/ScreenComponent/SplashScreenComponent';
 import MainView from './src/components/MainView';
-import ChatsPage from './src/pages/ChatsPage';
-import ContactsPage from './src/pages/ContactsPage';
-import TimeLinePage from './src/pages/TimeLinePage';
-import MePage from './src/pages/MePage';
-import SearchPage from './src/pages/SearchPages/SearchPage';
+import ChatsPage from './src/pages/ChatsPages/ChatsPage';
+import ContactsPage from './src/pages/ContactsPages/ContactsPage';
+import TimeLinePage from './src/pages/TimeLinePages/TimeLinePage';
+import MePage from './src/pages/MePages/MePage';
+import SearchPage from './src/pages/SearchPages/SearchPageIndex';
 import LoginPage from './src/pages/AuthPages/LoginPage';
 import ContainerAuthPages from './src/pages/AuthPages/ContainerAuthPages';
 import RegisterPage from './src/pages/AuthPages/RegisterPage';
@@ -25,6 +25,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 
 
 import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons/faCircleChevronLeft'
+import SettingPageIndex from './src/pages/MePages/SettingPages/SettingPageIndex';
+import SearchPageIndex from './src/pages/SearchPages/SearchPageIndex';
 
 
 
@@ -78,10 +80,6 @@ export default function App() {
           options={{ headerShown: false }}
         />
 
-        <Stack.Screen name="SearchPage"
-          component={SearchPage}
-          options={{ headerShown: false }}
-        />
 
         <Stack.Screen name="ContainerAuthPage"
           component={ContainerAuthPages}
@@ -93,6 +91,17 @@ export default function App() {
         />
         <Stack.Screen name="Đăng ký"
           component={RegisterPage}
+        />
+
+
+        <Stack.Screen name="SearchPage"
+          component={SearchPageIndex}
+          options={{ headerShown: false , animation:"none"}}
+        />
+
+
+        <Stack.Screen name="Cài đặt"
+          component={SettingPageIndex}
         />
 
 

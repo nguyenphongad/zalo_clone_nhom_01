@@ -6,7 +6,7 @@ import MenuComponent from './MenuComponent/MenuComponent'
 const MainView = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <HeaderSearchComponent/>
+            <HeaderSearchComponent navigation={navigation}/>
             <MenuComponent navigation={navigation}/>
         </View>
     )

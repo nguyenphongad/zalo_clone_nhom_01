@@ -1,8 +1,16 @@
+import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const MeHeaderComponent = () => {
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faGear } from '@fortawesome/free-solid-svg-icons/faGear'
+
+const MeHeaderComponent = ({navigation}) => {
     return (
-        <div>MeHeaderComponent</div>
+        <View>
+            <TouchableOpacity onPress={()=> navigation.navigate("Cài đặt")}>
+                <FontAwesomeIcon icon={faGear} size={25} style={{color:"#fff"}}/>
+            </TouchableOpacity>
+        </View>
     )
 }
 
