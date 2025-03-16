@@ -27,6 +27,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons/faCircleChevronLeft'
 import SettingPageIndex from './src/pages/MePages/SettingPages/SettingPageIndex';
 import SearchPageIndex from './src/pages/SearchPages/SearchPageIndex';
+import ChatDetailScreenIndex from './src/pages/ChatsPages/ChatDetailScreen/ChatDetailScreenIndex';
 
 
 
@@ -51,6 +52,7 @@ export default function App() {
           ),
           headerStyle: {
             backgroundColor: '#ff6666',
+            height:48
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -102,6 +104,14 @@ export default function App() {
 
         <Stack.Screen name="Cài đặt"
           component={SettingPageIndex}
+        />
+
+
+
+
+        <Stack.Screen name="ChatDetail"
+          component={ChatDetailScreenIndex}
+          options={{ headerShown: false , animation:"none" }}
         />
 
 
