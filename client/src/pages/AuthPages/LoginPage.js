@@ -64,7 +64,8 @@ export default LoginPage;
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10
+        padding: 10,
+        backgroundColor:"#fff"
     },
     textAlert: {
         textAlign: "center",
@@ -80,7 +81,8 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         marginTop: 20,
-        fontSize: 17
+        fontSize: 17,
+        backgroundColor:"#eeeeee"
     },
 
     fgPassword: {

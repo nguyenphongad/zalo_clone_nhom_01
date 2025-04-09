@@ -1,9 +1,13 @@
-import { View, Text, Button, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Text, Button, TouchableOpacity, StyleSheet, Image } from 'react-native'
 import React from 'react'
+
+import logo_img from "../../../assets/logo_icon_text.jpg"
+import { color_main, stylesMixin } from '../../styleMixins/@minxin'
 
 const ContainerAuthPages = ({ navigation }) => {
     return (
         <View style={styles.container}>
+            <Image source={logo_img} style={styles.logo_image}/>
             <View>
                 <TouchableOpacity
                     onPress={() => navigation.navigate("Đăng nhập")}
@@ -34,8 +38,15 @@ const styles = StyleSheet.create({
         height: "100%",
         justifyContent: "flex-end",
         alignItems: "center",
-        padding:50
+        padding:50,
+        backgroundColor:"#fff"
     },
+    logo_image:{
+        height:270,
+        objectFit:"contain",
+        marginBottom:60
+    },
+
     buttonNavigate: {
         width: 200,
         padding: 20,
@@ -50,7 +61,7 @@ const styles = StyleSheet.create({
     },
 
     btnLogin: {
-        backgroundColor: "#ff6666"
+        backgroundColor: color_main,
     },
     textLogin: {
         color: "#fff"

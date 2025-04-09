@@ -23,7 +23,7 @@ const ChatsPage = ({ navigation }) => {
                                 <TouchableOpacity
                                     key={item.id}
                                     style={styles.chatItem}
-                                    onPress={() => navigation.navigate("ChatDetail", { chat: item })}
+                                    onPress={() => navigation.navigate("ChatDetail", { chat: item ,navigation})}
                                 >
                                     <Image source={{ uri: item.imageAvatar }} style={styles.avatar} />
                                     <View style={styles.chatInfo}>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         width: "100%",
         justifyContent: "center",
         backgroundColor: "#fff",
-        padding:15,
+        padding:5,
         paddingBottom:30
     },
     

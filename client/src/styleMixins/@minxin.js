@@ -1,10 +1,13 @@
 import { StyleSheet } from "react-native";
 
+export const color_main = "#FE781F";
+
 export const stylesMixin  = StyleSheet.create({
+
     buttonComponent:{
         width:"auto",
         padding:20,
-        backgroundColor:"#ff6666",
+        backgroundColor:color_main,
         borderRadius:15,
         justifyContent:"center",
         alignItems:"center",
@@ -12,6 +15,8 @@ export const stylesMixin  = StyleSheet.create({
     },
     
 })
+
+// #FE781F
 
 
 // #eeeeee (238,238,238)

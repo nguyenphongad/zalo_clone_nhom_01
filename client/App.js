@@ -28,6 +28,7 @@ import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons/faCircleC
 import SettingPageIndex from './src/pages/MePages/SettingPages/SettingPageIndex';
 import SearchPageIndex from './src/pages/SearchPages/SearchPageIndex';
 import ChatDetailScreenIndex from './src/pages/ChatsPages/ChatDetailScreen/ChatDetailScreenIndex';
+import { color_main } from './src/styleMixins/@minxin';
 
 
 
@@ -51,7 +52,7 @@ export default function App() {
             </TouchableOpacity>
           ),
           headerStyle: {
-            backgroundColor: '#ff6666',
+            backgroundColor: color_main,
             height:48
           },
           headerTintColor: '#fff',
@@ -111,7 +112,9 @@ export default function App() {
 
         <Stack.Screen name="ChatDetail"
           component={ChatDetailScreenIndex}
-          options={{ headerShown: false , animation:"none" }}
+          options={{ headerShown: false ,
+            //  animation:"none" 
+            }}
         />
 
 

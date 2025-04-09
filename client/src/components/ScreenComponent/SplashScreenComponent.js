@@ -1,18 +1,22 @@
-import { View, Text, StyleSheet, StatusBar } from 'react-native'
+import { View, Text, StyleSheet, StatusBar, Image } from 'react-native'
 import React, { useEffect } from 'react'
+
+const logo_img = require("../../../assets/logo_icon_text.jpg")
+
 
 const SplashScreenComponent = ({ navigation }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigation.replace('ContainerAuthPage');
-        }, 1500);
+        }, 900);
         return () => clearTimeout(timer);
     }, [navigation]);
 
     return (
         <View style={styles.container}>
             <StatusBar hidden={true} style="dark" />
-            <Text style={styles.text}>INTRO</Text>
+            {/* <Text style={styles.text}>INTRO</Text> */}
+                <Image source={logo_img} style={styles.img_logo}/>
         </View>
     )
 }
@@ -24,12 +28,14 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ff6666',
+        // backgroundColor: '#ff6666',
+        backgroundColor: '#fff',
         padding: 30
     },
-    logo: {
-        width: "100%",
-        objectFit: "contain"
+    img_logo: {
+        width: "75%",
+        objectFit: "contain",
+        borderRadius:20
     },
     text: {
         color: "#fff",

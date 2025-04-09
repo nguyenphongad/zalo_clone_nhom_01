@@ -215,5 +215,33 @@
                 "seen": false
             }
         ]
+    },{
+        "id": 8,
+        "name": "Hoàng Văn Tùng",
+        "imageAvatar": "https://i.ibb.co/3pYzVwx/3.jpg",
+        "timeNearest": "30 phút trước",
+        "messages": [
+            {
+                "id": 1,
+                "text": "Tối nay đi ăn không?",
+                "sender": "me",
+                "time": "2025-03-16 11:00",
+                "seen": false
+            },
+            {
+                "id": 2,
+                "text": "Chắc là không rồi, mình bận chút!",
+                "sender": "them",
+                "time": "2025-03-16 11:10",
+                "seen": false
+            },
+            {
+                "id": 3,
+                "text": "Không sao, bữa khác nhé!",
+                "sender": "me",
+                "time": "2025-03-16 11:15",
+                "seen": false
+            }
+        ]
     }
 ]

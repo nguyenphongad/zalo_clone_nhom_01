@@ -13,6 +13,7 @@ import { faComment } from '@fortawesome/free-solid-svg-icons/faComment'
 import { faAddressBook } from '@fortawesome/free-solid-svg-icons/faAddressBook'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe'
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser'
+import { color_main } from '../../styleMixins/@minxin';
 
 const MenuComponent = ({ navigation }) => {
     const ARRAY_LIST_MENU = [
@@ -119,14 +120,14 @@ const styles = StyleSheet.create({
         color: '#565655',
     },
     activeTabText: {
-        color: '#ff6666',
+        color: color_main,
         fontWeight: '700',
     },
     styleIcon:{
         color: "#b7b2b2"
     },
     activeTabIcon:{
-        color: "#ff6666",
+        color: color_main,
         marginBottom:4
     }
 });

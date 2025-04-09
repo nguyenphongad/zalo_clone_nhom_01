@@ -5,6 +5,7 @@ import MeHeaderComponent from './MeHeaderComponent';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons/faMagnifyingGlass'
+import { color_main, stylesMixin } from '../../styleMixins/@minxin';
 
 const HeaderSearchComponent = ({ navigation }) => {
 
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     headerContainer: {
         width: "100%",
         height: 50,
-        backgroundColor: "#ff6666",
+        backgroundColor: color_main,
         justifyContent: "space-between",
         padding: 10,
         paddingRight: 15,
